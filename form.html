@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Страница</title>
+</head>
+<body>
+  <h1>Введите заголовок</h1>
+  <input type="text" id="title">
+
+  <h2>Выберите картинку</h2>
+  <input type="checkbox" id="spring">
+  <label for="image1"><img src="spring.jpg"></label>
+  <input type="checkbox" id="summer">
+  <label for="image2"><img src="summer.jpg"></label>
+  <input type="checkbox" id="winter">
+  <label for="image3"><img src="winter.jpg"></label>
+
+  <h3>Введите описание</h3>
+  <textarea id="description"></textarea>
+
+  <h4>Выберите цвет фона</h4>
+  <select id="background-color">
+    <option value="red">Красный</option>
+    <option value="green">Зеленый</option>
+    <option value="blue">Синий</option>
+  </select>
+
+  <button onclick="showPage()">Показать</button>
+
+  <script>
+    function showPage() {
+      const title = document.getElementById("title").value;
+      const images = [];
+      const checkboxes = document.querySelectorAll('input[type="checkbox"]:checked');
+      for (let i = 0; i < checkboxes.length; i++) {
+        images.push(checkboxes[i].nextElementSibling.firstElementChild.src);
+      }
+      const description = document.getElementById("description").value;
+      const backgroundColor = document.getElementById("background-color").value;
+
+      const html = `
+        <!DOCTYPE html>
+        <html>
+        <head>
+          <title>${title}</title>
+          <style>
+            body {
+              background-color: ${backgroundColor};
+            }
+          </style>
+        </head>
+        <body>
+          <h1>${title}</h1>
+          <img src="${images[0]}" alt="Изображение">
+          <p>${description}</p>
+        </body>
+        </html>
+      `;
+
+      const newWindow = window.open("", "_blank");
+      newWindow.document.write(html);
+      newWindow.document.close();
+    }
+  </script>
+
+  <li>
+    <a href="index.html">Вернуться на главную</a>
+  </li>
+</body>
+</html>

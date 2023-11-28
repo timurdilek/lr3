@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Компьютеры</title>
+  <link rel="icon" type="image/png" href="favicon.png" />
+  <link rel="stylesheet" type="text/css" href="style.css" media="screen">
+</head>
+<body>
+&nbsp;<div class="text">
+    <main>
+      <h1>Компьютеры</h1>
+        <p>Компьютер – это электронно-вычислительная машина, способная выполнять заданную последовательность операций, называемую программой. Само слово «компьютер» произошло от английских to compute («вычислять») и computer («вычислитель»). Изначально компьютером называли человека, который производил арифметические вычисления. При этом в ряде случаев он мог использовать механические устройства.</p>
+  
+        </details>&nbsp;<h2>Хронология становления веба</h2>
+          <p class="news"><span class="date">25.12.1990 - </span>Первый в мире браузер</p>
+          <p class="news"><span class="date">06.08.1991 - </span>Первый в мире сайт</p>
+          <p class="news"><span class="date">01.10.1994 - </span>World Wide Web Consortium (W3C)</p>
+          <p class="news"><span class="date">17.10.1994 - </span>Perl 5</p>
+          <p class="news"><span class="date">Начало 1995 года - </span>Apache HTTP Server</p>
+          <p class="news"><span class="date">23.05.1995 - </span>MySQL</p>
+          <p class="news"><span class="date">08.06.1995 - </span>Personal Home Page (PHP 1.0)</p>
+          <p class="news"><span class="date">17.12.1996 - </span>Cascading Style Sheets (CSS1)</p>
+<h1>Задание 1</h1>
+ <title>Document</title>
+    <style>
+        img{width: 320px; height: 260px; padding:10px}
+    </style>
+</head>
+<body>
+    <div class="wrap">
+        <img src="im1.jpg" onmouseover="document.getElementById('Text').value='intel'" onmouseout="document.getElementById('Text').value=''">
+        <img src="im2.jpg" onmouseover="document.getElementById('Text').value='amd'" onmouseout="document.getElementById('Text').value=''"><br>
+        <img src="im3.jpg" onmouseover="document.getElementById('Text').value='x86'" onmouseout="document.getElementById('Text').value=''">
+        <img src="im4.jpg" onmouseover="document.getElementById('Text').value='arm'" onmouseout="document.getElementById('Text').value=''"><br>
+       <div class = "textboxst">
+        <input type="text" id="Text">
+      </div>
+    </div>
+</body>
+</html>
+
+<head>
+<style> img{width:200;height:200}</style>
+<style> img{width:200;height:200}
+    .hidden {
+      display: none;
+    }
+  
+    .show-on-hover:hover .hidden {
+      display: block;
+    }
+
+</style>
+<script>
+i=0; 
+function slideShow() 
+{ 
+// массив картинок
+ris = new Array('im1.jpg', 'im2.jpg', 'im3.jpg', 'im4.jpg'); 
+// Проверяем, Не вышел ли счётчик за пределы массива 
+if (i >= 4)   i = 0; // если вышел, обнуляем счётчик. 
+//переменная r объект с именем slide
+r=document.getElementById('slide')
+// Меняем свойство src этого объекта на элемент из массива 
+r.src=ris[i];   
+i++;   // Увеличиваем счётчик
+}
+</script>
+</head>
+<body>
+<h1> Задание 2 </h1>
+<img id='slide'  src="imsl.jpg" />
+<form>
+<div class = buttonstyle>
+<input type="buttonstyle" value=" Перейти " onClick="slideShow() ;">
+</div>
+
+<pre>
+
+<h1>Задание 3</h1>
+<table>
+  <tr>
+    <td class="show-on-hover">Яблоко
+  
+    <img src="yab.jpg" class = "hidden" alt=" yab " style="position: relative; left: 200px; top:-130px;" />
+  </td>
+  </tr>
+  <tr>
+    <td class="show-on-hover">Апельсин
+  
+    <img src="orange.jpg" class = "hidden" alt=" orange " style="position: relative; left: 200px; top:-190px;" />
+  </td>
+  </tr>
+  <tr>
+    <td class="show-on-hover">Персик
+  
+    <img src="persik.jpg" class = "hidden" alt=" persik "style="position: relative; left: 200px; top:-250px;" />
+  </td>
+  </tr>
+
+
+<img hidden src="yab.jpg" style.visibility = 'hidden'> 
+  <img hidden src="orange.jpg" style.visibility = 'visible'>
+  <img hidden src="persik.jpg" style.visibility = 'visible'>
+</table>
+
+<pre>
+
+<h1>Задание 4</h1>
+
+<script>
+  i=0; 
+  function slideShow2() 
+  { 
+  // массив картинок
+  ris2 = new Array('yab.jpg', 'orange.jpg', 'persik.jpg'); 
+  // Проверяем, Не вышел ли счётчик за пределы массива 
+  if (i >= 3)   i = 0; // если вышел, обнуляем счётчик. 
+  //переменная r объект с именем slide
+  r=document.getElementById('slide2')
+  // Меняем свойство src этого объекта на элемент из массива 
+  r.src=ris2[i];   
+  i++;   // Увеличиваем счётчик
+  // вызываем эту же функцию через каждые 1500 мс
+  }
+  </script>
+
+  <img id='slide2'  src="pre.jpg" />
+<form>
+  <div class = buttonstyle>
+<input type="button" value=" Перейти " onClick="slideShow2() ;">
+</div>
+
+<h1>Задание 5: Математика</h1>
+
+<li>
+  <a href="calc.html">Перейти в калькулятор</a>
+</li>
+
+<h1>Задание 6: Текущий день недели</h1>
+<li>
+  <a href="dayweekyear.html">Узнать сегодняшний день недели</a>
+</li>
+
+<h1>Задание 7: Дни жизни</h1>
+<li>
+  <a href="daysoflife.html">Перейти к расчету</a>
+</li>
+
+<h1>Задание 8: Координаты</h1>
+<li>
+  <a href="dottostart.html">Перейти к расчету</a>
+</li>
+
+<h1>Задание  9: День недели моего дня рождения</h1>
+<li>
+  <a href="drDAY.html">Узнать день недели своего дня рождения</a>
+</li>
+
+<h1>Задание  10: Площадь прямоугольника</h1>
+<li>
+  <a href="ploshad.html">Перейти к расчету площади</a>
+</li>
+
+<h1>Задание  11: Форма для страницы</h1>
+<li>
+  <a href="form.html">Перейти в редактор формы</a>
+</li>
+
+<h1>Задание  12: Форма для описания художника</h1>
+<li>
+  <a href="hudozhnik.html">Перейти в редактор формы для создания художника</a>
+</li>
+
+<h1>Задание  13: Форма для создания биографии</h1>
+<li>
+  <a href="bio.html">Перейти в редактор биографии</a>
+</li>
+
+<h1>Задание  14: Форма для создания сказки</h1>
+<li>
+  <a href="fairytale.html">Перейти в редактор сказки</a>
+</li>
+</form></body>
+  </main>
+  </div> 
+</body>
+</html>

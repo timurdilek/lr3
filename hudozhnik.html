@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <script>
+        function showArtwork() {
+            var artist = document.getElementById('artist').value;
+            var description = document.getElementById('description').value;
+            var image = document.querySelector('input[name="image"]:checked').value;
+            
+            var italic = document.getElementById('italic').checked;
+            var bold = document.getElementById('bold').checked;
+            var underline = document.getElementById('underline').checked;
+            
+            var text = document.getElementById('text');
+            
+            text.innerHTML = description;
+            
+            if (italic) {
+                text.style.fontStyle = 'italic';
+            } else {
+                text.style.fontStyle = 'normal';
+            }
+            
+            if (bold) {
+                text.style.fontWeight = 'bold';
+            } else {
+                text.style.fontWeight = 'normal';
+            }
+            
+            if (underline) {
+                text.style.textDecoration = 'underline';
+            } else {
+                text.style.textDecoration = 'none';
+            }
+            
+            var artwork = document.getElementById('artwork');
+            artwork.innerHTML = '<h1>' + artist + '</h1>' + '<img src="' + image + '" alt="Artwork">';
+        }
+    </script>
+</head>
+<body>
+    <h1>Выберите фамилию художника:</h1>
+    <select id="artist">
+        <option value="Ван Гог">Винсент Ван Гог</option>
+        <option value="Дали">Сальвадор Дали</option>
+        <option value="Иван">Иван Айвазовский</option>
+    </select>
+    
+    <h1>Введите описание:</h1>
+    <textarea id="description"></textarea>
+    
+    <h1>Выберите картинку:</h1>
+    <input type="radio" name="image" value="vangog.jpeg">vangog.jpeg
+    <input type="radio" name="image" value="dali.jpg">dali.jpg
+    <input type="radio" name="image" value="ivan.jpg">ivan.jpg
+    
+    <h1>Выберите декорирование текста:</h1>
+    <input type="checkbox" id="italic"> Курсив
+    <input type="checkbox" id="bold"> Жирный
+    <input type="checkbox" id="underline"> Подчеркнутый
+    
+    <br><br>
+    <button onclick="showArtwork()">Показать</button>
+    
+    <div id="artwork"></div>
+    <div id="text"></div>
+    <li>
+      <a href="index.html">Вернуться на главную</a>
+    </li>
+</body>
+</html>
